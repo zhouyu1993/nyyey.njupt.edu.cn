@@ -1,0 +1,397 @@
+body {
+  background-image: url(../images/body.gif);
+  background-repeat: repeat-x;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+@mixin oneline {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#app {
+  display: none;
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+
+  .logo {
+    position: relative;
+    z-index: 1;
+    height: 130px;
+    background-image: url(../images/logo2.png);
+    background-size: cover;
+
+    span {
+      position: absolute;
+      right: 20px;
+      bottom: 10px;
+      z-index: 2;
+      font-size: 14px;
+    }
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+    background-color: #9ebae3;
+
+    a {
+      display: inline-block;
+      margin: 5px 10px;
+      padding: 0 10px 0 15px;
+      background-color: #666;
+      color: #fff;
+      border-top-left-radius: 20px;
+    }
+  }
+
+  .content {
+    display: flex;
+
+    .left, .right {
+      width: 310px;
+      margin: 0 10px 10px;
+    }
+
+    .center {
+      flex: 1;
+      margin: 0 5px 10px;
+
+      .news-info .list a p {
+        width: 400px;
+      }
+    }
+
+    section {
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+
+      h1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 5px;
+        font-size: 14px;
+        line-height: 2;
+        color: #036;
+        background-color: #d6e3f6;
+
+        a {
+          color: #036;
+        }
+      }
+    }
+
+    .pic-news {
+      position: relative;
+      z-index: 1;
+
+      .list {
+        width: 288px;
+
+        a {
+          display: none;
+          width: 288px;
+
+          &:first-child {
+            display: block;
+          }
+
+          img {
+            height: 220px;
+          }
+
+          p {
+            @include oneline();
+            background-color: #eee;
+            font-size: 14px;
+            text-align: center;
+          }
+        }
+      }
+
+      .num {
+        position: absolute;
+        right: 10px;
+        bottom: 40px;
+        z-index: 2;
+        font-size: 0;
+
+        span {
+          display: inline-block;
+          margin-right: 6px;
+          padding: 0 6px;
+          font-size: 12px;
+          color: #fff;
+          background-color: rgba(0, 0, 0, .7);
+
+          &.hover {
+            background-color: rgba(158, 0, 0, .7);
+          }
+        }
+      }
+    }
+
+    .sector-navigation {
+      .name {
+        display: flex;
+        align-items: center;
+        padding: 4px;
+
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 10px;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: #090992;
+
+          i {
+            font-size: 0;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 8px solid #fff;
+          }
+        }
+      }
+    }
+
+    .garden-overview {
+      p {
+        padding-top: 10px;
+        font-size: 12px;
+      }
+    }
+
+    .banner-swipe {
+      margin-top: 13px;
+
+      a {
+        display: none;
+
+        &:first-child {
+          display: block;
+        }
+
+        img {
+          max-height: 200px;
+        }
+      }
+    }
+
+    .news-info, .notice-info, .health-column {
+      .list {
+        a {
+          position: relative;
+          z-index: 1;
+          display: block;
+
+          p {
+            @include oneline();
+            display: block;
+            margin-top: 5px;
+
+            i {
+              display: inline-block;
+              margin-right: 8px;
+              font-size: 0;
+              border-top: 5px solid transparent;
+              border-bottom: 5px solid transparent;
+              border-left: 8px solid #e8b301;
+              vertical-align: middle;
+            }
+          }
+
+
+          span {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            z-index: 2;
+          }
+        }
+      }
+    }
+  }
+
+  .bottom {
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    background-color: #0a4398;
+
+    h1 {
+      font-size: 16px;
+    }
+  }
+
+  .listcolumnn {
+      display: flex;
+      align-items: flex-start;
+      width: 1200px;
+      min-height: 700px;
+      margin: 20px auto 0;
+
+      .left {
+        width: 200px;
+        min-height: 700px;
+        padding: 10px;
+        background-color: #ededed;
+
+        .column-anchor {
+          margin-top: 10px;
+
+          .Column_Anchor {
+            font-size: 25px!important;
+            color: #39c!important;
+          }
+        }
+
+        .column-list {
+          .wp_listcolumn {
+            margin-top: 20px!important;
+            border: 0!important;
+
+            .wp_column {
+              margin-bottom: 10px;
+
+              a {
+                font-weight: normal!important;
+                color: #121212!important;
+                background: linear-gradient(#a2ffd6, #3aaad4)!important;
+                border-radius: 25px!important;
+                box-shadow: 0 0 10px 6px #e6e6e6!important;
+
+                &:hover {
+                  background: linear-gradient(#ffe84f, #ff7200)!important;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .right {
+          position: relative;
+        flex: 1;
+        min-height: 700px;
+        margin-left: 40px;
+
+        .right-top {
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+
+          img {
+            width: 70px;
+            height: 70px;
+            margin-right: 20px;
+          }
+        }
+
+        .column-info {
+            border-top: 3px solid #39c;
+
+            .wp_article_list {
+                .list_item {
+                    height: 43px!important;
+                    padding-right: 20px!important;
+                    line-height: 43px!important;
+                    border-bottom: 2px solid #e5e5e5!important;
+
+                    .Article_Index {
+                        display: none!important;
+                    }
+
+                    .Article_PublishDate {
+                        color: #39c!important;
+                    }
+
+                    a {
+                      @include oneline();
+                      display: block;
+                      width: 800px;
+                    }
+                }
+            }
+
+            .wp_paging {
+                position: absolute!important;
+                right: 0!important;
+                bottom: 0!important;
+            }
+        }
+      }
+    }
+
+    .displayinfo {
+      width: 1200px;
+      min-height: 700px;
+      margin: 20px auto 0;
+
+      .displayinfo-detail {
+          .title {
+              margin-bottom: 10px;
+              padding: 0 50px;
+              text-align: center;
+          }
+
+          .shot-title {
+              margin-bottom: 4px;
+              padding: 0 50px;
+              text-align: center;
+          }
+
+          .second-title {
+              margin-bottom: 4px;
+              padding: 0 50px;
+              text-align: center;
+          }
+
+          .other {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              .time, .view, .source {
+                  display: inline-block;
+                  font-size: 14px;
+              }
+
+              .view {
+                  .WP_VisitCount {
+                      display: inline-block!important;
+                      font-size: 14px!important;
+                  }
+              }
+          }
+
+          .detail-content {
+              margin: 20px 0;
+              padding: 0 20px;
+              line-height: 1.5;
+
+              img {
+                  max-width: 800px;
+              }
+          }
+      }
+    }
+}
+
+.webplus {
+  display: none;
+}
